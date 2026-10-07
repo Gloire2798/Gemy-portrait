@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter, Allura } from "next/font/google";
+import ServiceWorkerRegister from "./ServiceWorkerRegister";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -24,6 +25,12 @@ const allura = Allura({
 export const metadata: Metadata = {
   title: "Gemy de mon cœur",
   description: "Une histoire, un avenir.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "Gemy",
+    statusBarStyle: "default",
+  },
 };
 
 export const viewport: Viewport = {
@@ -55,6 +62,7 @@ export default function RootLayout({
           WebkitFontSmoothing: "antialiased",
         }}
       >
+        <ServiceWorkerRegister />
         {children}
       </body>
     </html>
