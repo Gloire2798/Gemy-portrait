@@ -16,12 +16,12 @@ export default function AccueilPage() {
   return (
     <main
       style={{
-        minHeight: "100vh",
+        minHeight: "100dvh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "40px 24px",
+        padding: "24px 24px 32px",
         opacity: sortie ? 0 : 1,
         transform: sortie ? "translateY(-20px)" : "translateY(0)",
         transition: "opacity 0.6s ease, transform 0.6s ease",
@@ -34,7 +34,7 @@ export default function AccueilPage() {
         style={{
           width: "clamp(110px, 30vw, 140px)",
           height: "auto",
-          marginBottom: "20px",
+          marginBottom: "16px",
           animation: "flotter 4s ease-in-out infinite",
         }}
       />
@@ -43,13 +43,14 @@ export default function AccueilPage() {
       <h1
         style={{
           fontFamily: "var(--font-cormorant), serif",
-          fontSize: "clamp(2.2rem, 8vw, 3.2rem)",
+          fontSize: "clamp(2rem, 7.5vw, 3rem)",
           fontWeight: 500,
           color: "#4A3B3F",
           margin: 0,
-          marginBottom: "12px",
+          marginBottom: "8px",
           textAlign: "center",
           letterSpacing: "0.5px",
+          lineHeight: 1.1,
         }}
       >
         Gemy de mon cœur
@@ -58,10 +59,10 @@ export default function AccueilPage() {
       {/* Sous-titre */}
       <p
         style={{
-          fontSize: "0.95rem",
+          fontSize: "0.9rem",
           color: "#8B7B7F",
           margin: 0,
-          marginBottom: "28px",
+          marginBottom: "20px",
           textAlign: "center",
           letterSpacing: "1.5px",
           textTransform: "lowercase",
@@ -70,14 +71,14 @@ export default function AccueilPage() {
         une histoire, un avenir
       </p>
 
-      {/* Filet doré avec brillance */}
+      {/* Filet doré scintillant */}
       <div
         style={{
           width: "120px",
           height: "1px",
           background:
             "linear-gradient(90deg, transparent, #C9A86C, transparent)",
-          marginBottom: "48px",
+          marginBottom: "32px",
           position: "relative",
           animation: "briller 3s ease-in-out infinite",
         }}
@@ -103,7 +104,7 @@ export default function AccueilPage() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{
-          marginBottom: "56px",
+          marginBottom: "36px",
           animation: "battre 2.4s ease-in-out infinite",
         }}
       >
@@ -144,8 +145,8 @@ export default function AccueilPage() {
           background: "linear-gradient(135deg, #F4C7CE 0%, #E8A8B5 100%)",
           color: "#FFFFFF",
           border: "none",
-          padding: "18px 80px",
-          fontSize: "1.05rem",
+          padding: "16px 72px",
+          fontSize: "1rem",
           fontFamily: "var(--font-cormorant), serif",
           fontWeight: 500,
           letterSpacing: "2px",
