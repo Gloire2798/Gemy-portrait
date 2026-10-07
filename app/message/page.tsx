@@ -1,15 +1,24 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Home, BookOpen, Mail } from "lucide-react";
 
 export default function MessagePage() {
   const router = useRouter();
+  const [signatureVisible, setSignatureVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setSignatureVisible(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
+
+  const nom = "Gloire Kabala";
 
   return (
     <main
       style={{
-        minHeight: "100vh",
+        minHeight: "100dvh",
         display: "flex",
         flexDirection: "column",
         paddingBottom: "80px",
@@ -74,7 +83,6 @@ export default function MessagePage() {
           width: "100%",
         }}
       >
-        {/* Titre */}
         <h2
           style={{
             fontFamily: "var(--font-cormorant), serif",
@@ -90,18 +98,16 @@ export default function MessagePage() {
           Comment réussir
         </h2>
 
-        {/* Filet doré */}
         <div
           style={{
             width: "100px",
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent, #C9A96E, transparent)",
+              "linear-gradient(90deg, transparent, #C9A86C, transparent)",
             margin: "0 auto 48px",
           }}
         />
 
-        {/* Sous-titre */}
         <h3
           style={{
             fontFamily: "var(--font-cormorant), serif",
@@ -116,7 +122,6 @@ export default function MessagePage() {
           Qui est-elle ?
         </h3>
 
-        {/* Corps du message */}
         <div
           style={{
             fontSize: "1.05rem",
@@ -172,7 +177,7 @@ export default function MessagePage() {
             width: "60px",
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent, #C9A96E, transparent)",
+              "linear-gradient(90deg, transparent, #C9A86C, transparent)",
             margin: "48px auto 24px",
           }}
         />
@@ -198,15 +203,29 @@ export default function MessagePage() {
           </p>
           <p
             style={{
-              fontSize: "1.3rem",
-              fontStyle: "italic",
-              color: "#4A3B3F",
+              fontFamily: "var(--font-allura), cursive",
+              fontSize: "2.2rem",
+              color: "#C9A86C",
               margin: 0,
+              lineHeight: 1.2,
+              minHeight: "2.6rem",
               letterSpacing: "0.5px",
-              fontWeight: 500,
             }}
           >
-            Gloire Kabala
+            {signatureVisible &&
+              nom.split("").map((lettre, i) => (
+                <span
+                  key={i}
+                  style={{
+                    display: "inline-block",
+                    opacity: 0,
+                    animation: `ecrire 0.4s ease forwards`,
+                    animationDelay: `${i * 0.08}s`,
+                  }}
+                >
+                  {lettre === " " ? "\u00A0" : lettre}
+                </span>
+              ))}
           </p>
         </div>
       </article>
@@ -244,6 +263,19 @@ export default function MessagePage() {
           onClick={() => router.push("/message")}
         />
       </nav>
+
+      <style jsx global>{`
+        @keyframes ecrire {
+          from {
+            opacity: 0;
+            transform: translateY(-6px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </main>
   );
 }
@@ -281,4 +313,4 @@ function NavButton({
       <span>{label}</span>
     </button>
   );
-}
+            }
