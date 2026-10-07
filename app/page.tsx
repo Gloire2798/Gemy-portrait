@@ -32,9 +32,9 @@ export default function AccueilPage() {
         src="https://i.ibb.co/PGwN4TRY/couronne.png"
         alt="Couronne florale"
         style={{
-          width: "clamp(140px, 40vw, 200px)",
+          width: "clamp(110px, 30vw, 140px)",
           height: "auto",
-          marginBottom: "32px",
+          marginBottom: "20px",
           animation: "flotter 4s ease-in-out infinite",
         }}
       />
@@ -70,15 +70,16 @@ export default function AccueilPage() {
         une histoire, un avenir
       </p>
 
-      {/* Filet doré */}
+      {/* Filet doré avec brillance */}
       <div
         style={{
           width: "120px",
           height: "1px",
           background:
-            "linear-gradient(90deg, transparent, #C9A96E, transparent)",
+            "linear-gradient(90deg, transparent, #C9A86C, transparent)",
           marginBottom: "48px",
           position: "relative",
+          animation: "briller 3s ease-in-out infinite",
         }}
       >
         <div
@@ -89,14 +90,14 @@ export default function AccueilPage() {
             transform: "translate(-50%, -50%) rotate(45deg)",
             width: "6px",
             height: "6px",
-            background: "#C9A96E",
+            background: "#C9A86C",
           }}
         />
       </div>
 
       {/* Cœurs entrelacés */}
       <svg
-        width="clamp(120px, 35vw, 160px)"
+        width="clamp(100px, 28vw, 130px)"
         height="auto"
         viewBox="0 0 200 160"
         fill="none"
@@ -180,6 +181,10 @@ export default function AccueilPage() {
         @keyframes flotter {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-8px); }
+        }
+        @keyframes briller {
+          0%, 100% { opacity: 0.6; filter: brightness(1); }
+          50% { opacity: 1; filter: brightness(1.3); }
         }
       `}</style>
     </main>
