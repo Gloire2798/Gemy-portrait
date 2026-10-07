@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter, Allura } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -11,6 +11,13 @@ const cormorant = Cormorant_Garamond({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const allura = Allura({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-allura",
   display: "swap",
 });
 
@@ -32,14 +39,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${inter.variable}`}>
+    <html
+      lang="fr"
+      className={`${cormorant.variable} ${inter.variable} ${allura.variable}`}
+    >
       <body
         style={{
           margin: 0,
           padding: 0,
           fontFamily: "var(--font-inter), system-ui, sans-serif",
-          background:
-            "linear-gradient(180deg, #FDF6F5 0%, #F8E8EC 100%)",
+          background: "linear-gradient(180deg, #FDF6F5 0%, #F8E8EC 100%)",
           backgroundAttachment: "fixed",
           color: "#4A3B3F",
           minHeight: "100vh",
@@ -50,4 +59,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-          }
+}
