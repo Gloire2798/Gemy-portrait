@@ -22,6 +22,7 @@ export default function MessagePage() {
         display: "flex",
         flexDirection: "column",
         paddingBottom: "80px",
+        boxSizing: "border-box",
       }}
     >
       {/* Header */}
@@ -37,6 +38,7 @@ export default function MessagePage() {
           justifyContent: "space-between",
           padding: "16px 20px",
           borderBottom: "1px solid rgba(201, 169, 110, 0.2)",
+          boxSizing: "border-box",
         }}
       >
         <button
@@ -79,8 +81,9 @@ export default function MessagePage() {
           flex: 1,
           maxWidth: "640px",
           margin: "0 auto",
-          padding: "40px 24px 60px",
+          padding: "40px 20px 60px",
           width: "100%",
+          boxSizing: "border-box",
         }}
       >
         <h2
@@ -244,6 +247,7 @@ export default function MessagePage() {
           justifyContent: "space-around",
           padding: "12px 0",
           zIndex: 50,
+          boxSizing: "border-box",
         }}
       >
         <NavButton
