@@ -10,7 +10,7 @@ export default function AccueilPage() {
 
   const ouvrir = () => {
     setSortie(true);
-    setTimeout(() => router.push("/album"), 700);
+    setTimeout(() => router.push("/album"), 600);
   };
 
   return (
@@ -24,48 +24,22 @@ export default function AccueilPage() {
         padding: "40px 24px",
         opacity: sortie ? 0 : 1,
         transform: sortie ? "translateY(-20px)" : "translateY(0)",
-        transition: "opacity 0.7s ease, transform 0.7s ease",
+        transition: "opacity 0.6s ease, transform 0.6s ease",
       }}
     >
       {/* Couronne florale */}
-      <div
+      <img
+        src="https://i.ibb.co/PGwN4TRY/couronne.png"
+        alt="Couronne florale"
         style={{
+          width: "clamp(140px, 40vw, 200px)",
+          height: "auto",
           marginBottom: "32px",
-          opacity: 0.7,
+          animation: "flotter 4s ease-in-out infinite",
         }}
-      >
-        <svg
-          width="80"
-          height="80"
-          viewBox="0 0 80 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M40 8C40 8 28 16 28 30C28 44 40 52 40 52C40 52 52 44 52 30C52 16 40 8 40 8Z"
-            stroke="#C9A96E"
-            strokeWidth="1"
-            fill="none"
-          />
-          <circle cx="40" cy="30" r="3" fill="#C9A96E" />
-          <path
-            d="M20 40C20 40 14 44 14 52C14 60 20 64 20 64"
-            stroke="#C9A96E"
-            strokeWidth="1"
-            fill="none"
-            strokeLinecap="round"
-          />
-          <path
-            d="M60 40C60 40 66 44 66 52C66 60 60 64 60 64"
-            stroke="#C9A96E"
-            strokeWidth="1"
-            fill="none"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
+      />
 
-      {/* Titre principal */}
+      {/* Titre */}
       <h1
         style={{
           fontFamily: "var(--font-cormorant), serif",
@@ -120,67 +94,47 @@ export default function AccueilPage() {
         />
       </div>
 
-      {/* Illustration cœurs */}
-      <div style={{ marginBottom: "56px", position: "relative" }}>
-        <svg
-          width="140"
-          height="120"
-          viewBox="0 0 140 120"
+      {/* Cœurs entrelacés */}
+      <svg
+        width="clamp(120px, 35vw, 160px)"
+        height="auto"
+        viewBox="0 0 200 160"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          marginBottom: "56px",
+          animation: "battre 2.4s ease-in-out infinite",
+        }}
+      >
+        <path
+          d="M60 60 C60 40 45 30 35 30 C22 30 12 42 12 58 C12 85 60 130 60 130"
+          stroke="#C97B8A"
+          strokeWidth="7"
+          strokeLinecap="round"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Feuillage gauche */}
-          <path
-            d="M20 60C20 60 10 50 15 40C20 30 30 35 30 35"
-            stroke="#C97B8A"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.5"
-          />
-          <path
-            d="M15 70C15 70 5 65 8 55"
-            stroke="#C97B8A"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.5"
-          />
-          {/* Feuillage droit */}
-          <path
-            d="M120 60C120 60 130 50 125 40C120 30 110 35 110 35"
-            stroke="#C97B8A"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.5"
-          />
-          <path
-            d="M125 70C125 70 135 65 132 55"
-            stroke="#C97B8A"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.5"
-          />
-          {/* Cœur gauche */}
-          <path
-            d="M50 55C50 45 42 40 37 40C32 40 28 44 28 50C28 60 50 78 50 78"
-            stroke="#C97B8A"
-            strokeWidth="1.2"
-            fill="none"
-          />
-          {/* Cœur droit */}
-          <path
-            d="M90 55C90 45 98 40 103 40C108 40 112 44 112 50C112 60 90 78 90 78"
-            stroke="#C97B8A"
-            strokeWidth="1.2"
-            fill="none"
-          />
-          {/* Petit cœur central */}
-          <path
-            d="M70 52C70 48 67 46 65 46C63 46 61 47 61 49C61 53 70 60 70 60C70 60 79 53 79 49C79 47 77 46 75 46C73 46 70 48 70 52Z"
-            fill="#F4C7CE"
-            opacity="0.7"
-          />
-        </svg>
-      </div>
+        />
+        <path
+          d="M140 60 C140 40 155 30 165 30 C178 30 188 42 188 58 C188 85 140 130 140 130"
+          stroke="#C97B8A"
+          strokeWidth="7"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d="M100 95 C100 95 60 60 60 42 C60 30 72 25 80 25 C90 25 98 33 100 42"
+          stroke="#C97B8A"
+          strokeWidth="7"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d="M100 95 C100 95 140 60 140 42 C140 30 128 25 120 25 C110 25 102 33 100 42"
+          stroke="#C97B8A"
+          strokeWidth="7"
+          strokeLinecap="round"
+          fill="none"
+        />
+      </svg>
 
       {/* Bouton Ouvrir */}
       <button
@@ -197,21 +151,37 @@ export default function AccueilPage() {
           borderRadius: "999px",
           cursor: "pointer",
           boxShadow: "0 8px 24px rgba(201, 123, 138, 0.25)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease",
           display: "flex",
           alignItems: "center",
           gap: "10px",
-        }}
-        onMouseDown={(e) => {
-          e.currentTarget.style.transform = "scale(0.97)";
-        }}
-        onMouseUp={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
+          animation: "respirer 2s ease-in-out infinite",
         }}
       >
         <Heart size={16} strokeWidth={2} fill="#FFFFFF" />
         Ouvrir
       </button>
+
+      {/* Animations CSS */}
+      <style jsx global>{`
+        @keyframes battre {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.08); }
+        }
+        @keyframes respirer {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 8px 24px rgba(201, 123, 138, 0.25);
+          }
+          50% {
+            transform: scale(1.04);
+            box-shadow: 0 12px 32px rgba(201, 123, 138, 0.4);
+          }
+        }
+        @keyframes flotter {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-8px); }
+        }
+      `}</style>
     </main>
   );
-      }
+}
