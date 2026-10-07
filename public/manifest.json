@@ -1,0 +1,25 @@
+{
+  "name": "Gemy de mon cœur",
+  "short_name": "Gemy",
+  "description": "Une histoire, un avenir.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDF6F5",
+  "theme_color": "#FDF6F5",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/PGwN4TRY/couronne.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.ibb.co/PGwN4TRY/couronne.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
