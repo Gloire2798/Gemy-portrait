@@ -178,19 +178,37 @@ export default function MessagePage() {
         />
 
         {/* Signature */}
-        <p
+        <div
           style={{
-            fontFamily: "var(--font-cormorant), serif",
-            fontSize: "1.2rem",
-            fontStyle: "italic",
-            color: "#4A3B3F",
-            margin: 0,
             textAlign: "right",
-            letterSpacing: "0.5px",
+            fontFamily: "var(--font-cormorant), serif",
           }}
         >
-          — Gloire Kabala
-        </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              fontStyle: "italic",
+              color: "#8B7B7F",
+              margin: 0,
+              marginBottom: "4px",
+              letterSpacing: "0.5px",
+            }}
+          >
+            Ton ami
+          </p>
+          <p
+            style={{
+              fontSize: "1.3rem",
+              fontStyle: "italic",
+              color: "#4A3B3F",
+              margin: 0,
+              letterSpacing: "0.5px",
+              fontWeight: 500,
+            }}
+          >
+            Gloire Kabala
+          </p>
+        </div>
       </article>
 
       {/* Navigation bas */}
@@ -263,4 +281,4 @@ function NavButton({
       <span>{label}</span>
     </button>
   );
-            }
+}
