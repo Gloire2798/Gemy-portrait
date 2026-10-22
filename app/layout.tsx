@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter, Allura } from "next/font/google";
-import ServiceWorkerRegister from "./ServiceWorkerRegister";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -62,7 +61,6 @@ export default function RootLayout({
           WebkitFontSmoothing: "antialiased",
         }}
       >
-        <ServiceWorkerRegister />
         {children}
       </body>
     </html>
