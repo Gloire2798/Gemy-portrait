@@ -1,7 +1,7 @@
 // Service Worker — Gemy de mon cœur
 // Stratégie : cache-first pour tout, avec mise à jour en arrière-plan
 
-const CACHE_NAME = "gemy-portrait-v1";
+const CACHE_NAME = "gemy-portrait-v2";
 
 // Fichiers à mettre en cache dès l'installation
 const PRECACHE = [
