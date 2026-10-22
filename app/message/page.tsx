@@ -98,7 +98,7 @@ export default function MessagePage() {
             letterSpacing: "0.5px",
           }}
         >
-          Comment réussir
+          Comment réussir ?
         </h2>
 
         <div
@@ -134,32 +134,85 @@ export default function MessagePage() {
           }}
         >
           <p style={{ margin: "0 0 20px" }}>
-            C'est une fille qui a beaucoup de rêves. Son âge ne limite ni sa
-            capacité à rêver ni à imaginer son avenir. Cette fille veut voyager
-            dans différents endroits. Elle veut être indépendante et réussir.
+            C'est une fille qui a beaucoup de rêves. Elle veut voyager,
+            découvrir le monde, être indépendante, réussir sa vie et rendre
+            fière la personne qu'elle deviendra demain.
           </p>
 
           <p style={{ margin: "0 0 20px" }}>
-            Pour beaucoup de gens, ce n'est qu'un rêve, mais pour elle, c'est
-            l'avenir qu'elle doit avoir. Elle choisit donc de marcher dans sa
-            direction.
+            Elle ne sait pas encore comment tout cela va se réaliser, ni combien
+            de temps ça lui prendra. Mais elle sait une chose : elle ne veut pas
+            passer sa vie à regarder les autres vivre leurs rêves. Elle veut
+            vivre les siens.
           </p>
 
           <p style={{ margin: "0 0 20px" }}>
-            Elle ose rêver grand parce qu'elle en est capable, grâce à la
-            connaissance de soi et au courage. Elle ne se regarde pas en voyant
-            ses faiblesses. Au contraire, elle se voit comme une championne.
+            Certains trouveront peut-être ses rêves trop grands. D'autres lui
+            diront que c'est difficile, que la vie ne fonctionne pas toujours
+            comme on le souhaite. Et ils ont peut-être raison. Mais ce n'est pas
+            une raison pour arrêter de rêver, n'est-ce pas ?
           </p>
 
           <p style={{ margin: "0 0 20px" }}>
-            Elle considère sa vie comme un cadeau de Dieu et sait que tout ira
-            bien pour elle si elle choisit de suivre son cœur et de travailler
-            dur pour atteindre ses objectifs à l'avenir.
+            Après tout, qui sait de quoi demain sera fait ?
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            Cette fille a ses défauts, ses peurs et ses moments de doute. Elle
+            n'a pas toutes les réponses, elle ne sait pas toujours si elle prend
+            le bon chemin, mais elle avance. Et même si elle tombe parfois,
+            j'espère qu'elle trouvera toujours la force de se relever.
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            Elle ne demande pas que tout soit facile. Elle veut simplement avoir
+            la chance de vivre cette vie dont elle rêve tant.
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            Et tu sais quoi ?
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            J'espère qu'un jour, elle repensera à la fille qu'elle est
+            aujourd'hui, à tous ses rêves, à ses peurs et à ses petites
+            victoires, puis qu'elle sourira en se disant : « J'ai réussi. J'ai
+            vraiment réussi à faire tout ça ! »
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            Et si ce jour tarde à arriver, j'espère qu'elle n'oubliera jamais
+            qu'elle a encore le temps d'apprendre, de grandir et de recommencer.
           </p>
 
           <p
             style={{
               margin: "32px 0 20px",
+              fontFamily: "var(--font-cormorant), serif",
+              fontSize: "1.3rem",
+              fontStyle: "italic",
+              color: "#C97B8A",
+              textAlign: "center",
+              lineHeight: 1.5,
+            }}
+          >
+            Alors, comment réussir à réaliser ses rêves ?
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            En gardant la foi, en travaillant dur et en continuant d'avancer,
+            même lorsque les choses ne se passent pas comme prévu.
+          </p>
+
+          <p style={{ margin: "0 0 20px" }}>
+            Parce que cette fille mérite de vivre les belles choses qu'elle
+            imagine. Et j'espère sincèrement que la vie lui en réservera
+            beaucoup.
+          </p>
+
+          <p
+            style={{
+              margin: "32px 0 12px",
               fontFamily: "var(--font-cormorant), serif",
               fontSize: "1.4rem",
               fontStyle: "italic",
@@ -168,9 +221,21 @@ export default function MessagePage() {
               lineHeight: 1.5,
             }}
           >
-            Comment réussir à réaliser son rêve ?
-            <br />
-            Parce qu'elle est la patronne.
+            Qui est-elle, au fait ?
+          </p>
+
+          <p
+            style={{
+              margin: "0 0 20px",
+              fontFamily: "var(--font-cormorant), serif",
+              fontSize: "1.6rem",
+              fontWeight: 600,
+              color: "#C97B8A",
+              textAlign: "center",
+              lineHeight: 1.4,
+            }}
+          >
+            C'est la patronne ! 🥹❤️👑
           </p>
         </div>
 
@@ -202,7 +267,7 @@ export default function MessagePage() {
               letterSpacing: "0.5px",
             }}
           >
-            Ton ami
+            Ton ami,
           </p>
           <p
             style={{
@@ -317,4 +382,4 @@ function NavButton({
       <span>{label}</span>
     </button>
   );
-            }
+              }
